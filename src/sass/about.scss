@@ -1,0 +1,23 @@
+.about{
+    background-color: $lightgray;
+    padding: 100px 0;
+    position: relative;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: url(../img/circle.png) center center no-repeat;
+        width: 100%;
+        height: 89px;
+        top: -89px;
+    }
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: -150px;
+}

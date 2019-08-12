@@ -10,6 +10,9 @@ $phones: 500px;
 
 @import "header.scss";
 @import "hero.scss";
+@import "about.scss";
+@import "catalog.scss";
+@import "delivery.scss";
 //@import "after.scss";
 //@import "comfort.scss";
 //@import "video-block.scss";
@@ -18,4 +21,4 @@ $phones: 500px;
 //@import "faq.scss";
 //@import "acco.scss";
 //@import "tabs.scss";
-//@import "footer.scss";
+@import "footer.scss";

@@ -1,0 +1,15 @@
+.delivery{
+    position: relative;
+    padding-bottom: 50px;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        background: url(../img/circle.png) center center no-repeat;
+        width: 100%;
+        height: 89px;
+        bottom: -89px;
+        transform: rotate(180deg);
+    }
+}

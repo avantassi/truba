@@ -255,14 +255,7 @@
             <div class="modal-header">
                 <a href="#close" title="Close" class="close">×</a>
             </div>
-            <form class="modal-body" action="mail.php">
-
-                <!-- Hidden Required Fields -->
-                <input type="hidden" name="project_name" value="Медные трубы">
-                <input type="hidden" name="admin_email" value="katerinasavinav@gmail.com">
-                <input type="hidden" name="form_subject" value="Заявка">
-                <!-- END Hidden Required Fields -->
-
+            <form class="modal-body" action="mail/sendmail.php" method="POST">
                 <input type="text" class="input-block" placeholder="Ваше имя">
                 <input type="text" class="input-block" id="phone" placeholder="Ваш телефон">
                 <button class="btn btn--orange btn--modal">Оставить заявку</button>
@@ -307,6 +300,7 @@
   crossorigin="anonymous"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/jquery.sendmail.js"></script>
 <script src="js/main.js"></script>
 
 </body>

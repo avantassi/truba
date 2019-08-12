@@ -127,6 +127,17 @@ p {
   box-shadow: 15px 15px 20px 0px #cccccc;
 }
 
+.btn--modal {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  min-width: 300px;
+  padding: 0;
+  line-height: 65px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
 .btn--small {
   background-color: #f15a24;
   color: #ffffff;
@@ -339,7 +350,7 @@ p {
 
 .modal-dialog {
   position: relative;
-  width: 500px;
+  width: 400px;
   margin: 10px auto;
   top: 30%;
 }
@@ -368,28 +379,8 @@ p {
 /* свойства для заголовка модального окна */
 
 .modal-header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  right: 0;
   padding: 15px;
-  border-bottom: 1px solid #eceeef;
-}
-
-.modal-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1.5;
-  font-size: 1.25rem;
-  font-weight: 500;
 }
 
 /* свойства для кнопки "Закрыть" */
@@ -424,8 +415,27 @@ p {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 15px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-block {
+  line-height: 65px;
+  height: 65px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 300px;
+  color: #4d4d4d;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding-left: 30px;
+  border: 1px solid #4d4d4d;
+  margin-bottom: 20px;
 }
 
 .footer {

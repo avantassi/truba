@@ -128,7 +128,7 @@
                         </p>
                     </div>
                 </div>
-                <a href="" class="btn btn--orange">Оставить заявку</a>
+                <a href="#openModal" class="btn btn--orange">Оставить заявку</a>
                 <h2 class="second-title" id="meter">Метрическая медная труба</h2>
                 <div class="catalog__wrap">
                     <div class="catalog__item">
@@ -203,7 +203,7 @@
                         </p>
                     </div>
                 </div>
-                <a href="" class="btn btn--orange">Оставить заявку</a>
+                <a href="#openModal2" class="btn btn--orange">Оставить заявку</a>
             </div>
         </section>
 
@@ -242,7 +242,7 @@
                 <a href="" class="btn btn--small">в штангах</a>
             </div>
             <div class="container">
-                <a href="#openModal" class="btn btn--footer">форма обратной связи</a>
+                <a href="#openModal3" class="btn btn--footer">форма обратной связи</a>
             </div>
         </footer>
 
@@ -253,11 +253,49 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title">Название</h3>
+                <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <form class="modal-body" action="mail.php">
+
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Медные трубы">
+                <input type="hidden" name="admin_email" value="katerinasavinav@gmail.com">
+                <input type="hidden" name="form_subject" value="Заявка">
+                <!-- END Hidden Required Fields -->
+
+                <input type="text" class="input-block" placeholder="Ваше имя">
+                <input type="text" class="input-block" id="phone" placeholder="Ваш телефон">
+                <button class="btn btn--orange btn--modal">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="openModal2" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
                 <a href="#close" title="Close" class="close">×</a>
             </div>
             <div class="modal-body">
-                <p>Содержимое модального окна...</p>
+                <input type="text" class="input-block" placeholder="Ваше имя">
+                <input type="text" class="input-block" id="phone2" placeholder="Ваш телефон">
+                <a href="" class="btn btn--orange btn--modal">Оставить заявку</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="openModal3" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="input-block" placeholder="Ваше имя">
+                <input type="text" class="input-block" id="phone3" placeholder="Ваш телефон">
+                <a href="" class="btn btn--orange btn--modal">Оставить заявку</a>
             </div>
         </div>
     </div>
@@ -268,6 +306,7 @@
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
 <script src="js/parallax.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>

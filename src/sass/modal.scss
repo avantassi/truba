@@ -24,7 +24,7 @@
 /* ширина модального окна и его отступы от экрана */
 .modal-dialog {
   position: relative;
-  width: 500px;
+  width: 400px;
   margin: 10px auto;
   top: 30%;
 }
@@ -51,28 +51,10 @@
 
 /* свойства для заголовка модального окна */
 .modal-header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  right: 0;
   padding: 15px;
-  border-bottom: 1px solid #eceeef;
 }
-.modal-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1.5;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
+
 /* свойства для кнопки "Закрыть" */
 .close {
   float: right;
@@ -99,6 +81,25 @@
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 15px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-block{
+  line-height: 65px;
+  height: 65px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: $white;
+  width: 300px;
+  color: $darkgray;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding-left: 30px;
+  border: 1px solid $darkgray;
+  margin-bottom: 20px;
 }

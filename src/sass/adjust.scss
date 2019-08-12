@@ -44,6 +44,10 @@ p {
   align-items: center;
   position: relative;
 
+  @include tablets{
+    padding: 0 15px;
+  }
+
   &--row{
     flex-direction: row;
     align-items: center;
@@ -79,9 +83,14 @@ p {
   font-weight: 300;
   text-indent: 50px;
 
+  @include tablets{
+    font-size: 20px;
+  }
+
   &--small{
     font-size: 18px;
     text-align: center;
+    text-indent: 0;
   }
 }
 
@@ -96,12 +105,30 @@ p {
   min-width: 400px;
   text-align: center;
   background-color: $lightgray;
+  transition: .5s all;
+
+  &:hover{
+    background-color: $darkorange;
+    color: $white;
+  }
+
+  @include tablets{
+    margin-bottom: 20px;
+  }
 
   &--orange{
     background-color: $darkorange;
     color: $white;
     box-shadow: none;
     text-transform: lowercase;
+    border: 1px solid transparent;
+
+    &:hover{
+      background-color: $lightgray;
+      color: $darkgray;
+      border: 1px solid $darkgray;
+      box-shadow: 15px 15px 20px 0px #cccccc;
+    }
   }
 
   &--small{
@@ -111,6 +138,17 @@ p {
     text-transform: lowercase;
     min-width: 220px;
     margin: 100px 0;
+    border: 1px solid transparent;
+
+    &:hover{
+      background-color: $lightgray;
+      color: $darkgray;
+      border: 1px solid $darkgray;
+    }
+
+    @include tablets{
+      margin-top: 20px;
+    }
   }
 
   &--footer{
@@ -133,6 +171,10 @@ p {
     text-transform: none;
     display: block;
     margin: 0;
+
+    @include tablets{
+      font-size: 26px;
+    }
   }
 }
 

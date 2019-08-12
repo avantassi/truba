@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   box-sizing: border-box;
 }
@@ -88,6 +90,7 @@ p {
 .descr--small {
   font-size: 18px;
   text-align: center;
+  text-indent: 0;
 }
 
 .btn {
@@ -101,6 +104,12 @@ p {
   min-width: 400px;
   text-align: center;
   background-color: #f2f2f2;
+  transition: .5s all;
+}
+
+.btn:hover {
+  background-color: #f15a24;
+  color: #ffffff;
 }
 
 .btn--orange {
@@ -108,6 +117,14 @@ p {
   color: #ffffff;
   box-shadow: none;
   text-transform: lowercase;
+  border: 1px solid transparent;
+}
+
+.btn--orange:hover {
+  background-color: #f2f2f2;
+  color: #4d4d4d;
+  border: 1px solid #4d4d4d;
+  box-shadow: 15px 15px 20px 0px #cccccc;
 }
 
 .btn--small {
@@ -117,6 +134,13 @@ p {
   text-transform: lowercase;
   min-width: 220px;
   margin: 100px 0;
+  border: 1px solid transparent;
+}
+
+.btn--small:hover {
+  background-color: #f2f2f2;
+  color: #4d4d4d;
+  border: 1px solid #4d4d4d;
 }
 
 .btn--footer {
@@ -180,6 +204,12 @@ p {
   align-items: center;
   letter-spacing: 2px;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: .5s all;
+}
+
+.contacts-item:hover {
+  border-bottom: 1px solid #ffffff;
 }
 
 .contacts-img {
@@ -266,8 +296,136 @@ p {
   background: url(../img/circle.png) center center no-repeat;
   width: 100%;
   height: 89px;
-  bottom: -89px;
+  bottom: -88px;
   transform: rotate(180deg);
+}
+
+/* свойства модального окна по умолчанию */
+
+.modal {
+  position: fixed;
+  /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* цвет фона */
+  z-index: 1050;
+  opacity: 0;
+  /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in;
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+  /* анимация перехода */
+  pointer-events: none;
+  /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+
+/* при отображении модального окно */
+
+.modal:target {
+  opacity: 1;
+  /* делаем окно видимым */
+  pointer-events: auto;
+  /* элемент видим для событий мыши */
+  overflow-y: auto;
+  /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+
+/* ширина модального окна и его отступы от экрана */
+
+.modal-dialog {
+  position: relative;
+  width: 500px;
+  margin: 10px auto;
+  top: 30%;
+}
+
+/* свойства для блока, содержащего контент модального окна */
+
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+/* свойства для заголовка модального окна */
+
+.modal-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* свойства для кнопки "Закрыть" */
+
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  text-decoration: none;
+}
+
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+
+.close:focus,
+.close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+
+/* свойства для блока, содержащего основное содержимое окна */
+
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
 }
 
 .footer {
@@ -276,12 +434,46 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
   .container--row {
     flex-wrap: wrap;
     justify-content: center;
   }
 
+  .descr {
+    font-size: 20px;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+  }
+
+  .btn--small {
+    margin-top: 20px;
+  }
+
+  .first-title--small {
+    font-size: 26px;
+  }
+
   .contacts-item {
     margin-top: 15px;
+  }
+
+  .about {
+    padding-top: 150px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 90%;
+    top: -200px;
+  }
+
+  .catalog__item {
+    width: 220px;
   }
 }

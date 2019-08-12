@@ -19,6 +19,10 @@
         align-items: center;
         padding-top: 20px;
         margin-bottom: 20px;
+
+        @include tablets{
+            width: 220px;
+        }
     }
 
     &__title{

@@ -42,8 +42,8 @@
         <section class="about">
             <div class="container">
                 <div class="buttons">
-                    <a href="" class="btn">дюймовая</a>
-                    <a href="" class="btn">метрическая</a>
+                    <a href="#inch" class="btn flowing-scroll">дюймовая</a>
+                    <a href="#meter" class="btn flowing-scroll">метрическая</a>
                 </div>
                 <p class="descr">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, fugiat. Asperiores 
@@ -70,7 +70,7 @@
 
         <section class="catalog">
             <div class="container">
-                <h2 class="second-title">Дюймовая медная труба</h2>
+                <h2 class="second-title" id="inch">Дюймовая медная труба</h2>
                 <div class="catalog__wrap">
                     <div class="catalog__item">
                         <div class="catalog__img-wrap">
@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <a href="" class="btn btn--orange">Оставить заявку</a>
-                <h2 class="second-title">Метрическая медная труба</h2>
+                <h2 class="second-title" id="meter">Метрическая медная труба</h2>
                 <div class="catalog__wrap">
                     <div class="catalog__item">
                         <div class="catalog__img-wrap">
@@ -236,16 +236,30 @@
                 </a>
             </div>
             <div class="container container--row">
-                <a href="" class="btn btn--small">дюймовая</a>
-                <a href="" class="btn btn--small">метрическая</a>
+                <a href="#inch" class="btn btn--small flowing-scroll">дюймовая</a>
+                <a href="#meter" class="btn btn--small flowing-scroll">метрическая</a>
                 <a href="" class="btn btn--small">в бухтах</a>
                 <a href="" class="btn btn--small">в штангах</a>
             </div>
             <div class="container">
-                <a href="" class="btn btn--footer">форма обратной связи</a>
+                <a href="#openModal" class="btn btn--footer">форма обратной связи</a>
             </div>
         </footer>
 
+    </div>
+</div>
+
+<div id="openModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Название</h3>
+                <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">
+                <p>Содержимое модального окна...</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -253,10 +267,8 @@
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
-<script src="js/parallax.min.js"></script>  
-<script>
-$('.parallax-window').parallax({imageSrc: 'img/hero-bg.png'});
-</script>
+<script src="js/parallax.min.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

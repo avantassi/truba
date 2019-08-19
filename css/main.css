@@ -274,10 +274,12 @@ p {
   display: flex;
   flex-direction: column;
   border: 2px solid #f2f2f2;
-  height: fit-content;
   align-items: center;
   padding-top: 20px;
   margin-bottom: 20px;
+  height: 363px;
+  overflow: hidden;
+  transition: .5s all;
 }
 
 .catalog__title {
@@ -293,6 +295,7 @@ p {
   font-weight: 300;
   color: #4d4d4d;
   padding: 10px;
+  height: 100%;
 }
 
 .delivery {
@@ -485,5 +488,6 @@ p {
 
   .catalog__item {
     width: 220px;
+    height: 390px;
   }
 }

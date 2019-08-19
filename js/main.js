@@ -31,6 +31,47 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-$('form.example').sendMail({
-    // Параметры...
+$('.catalog__item').each(function(){
+    var totalHeight = getTotalHeigh($(this));
+    if (totalHeight > 363)
+    {
+        $(this)
+            .mouseover(function(){
+                var tH = getTotalHeigh($(this));
+                $(this).animate({
+                    'height': tH + 40
+                }, 100);
+            })
+            .mouseleave(function(){
+                var tH = getTotalHeigh($(this));
+                $(this).animate({
+                    'height': 363
+                }, 100);
+            });
+    }
+
+    if($(window).width() < 768){
+        $(this)
+            .mouseover(function(){
+                var tH = getTotalHeigh($(this));
+                $(this).animate({
+                    'height': tH + 40
+                }, 100);
+            })
+            .mouseleave(function(){
+                var tH = getTotalHeigh($(this));
+                $(this).animate({
+                    'height': 390
+                }, 100);
+            });
+    }
 });
+
+function getTotalHeigh(obj)
+{
+    var totalHeight = 0;
+    obj.children().each(function () {
+        totalHeight += $(this).height();
+    });
+    return totalHeight;
+}

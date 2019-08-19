@@ -279,7 +279,6 @@ p {
   margin-bottom: 20px;
   height: 363px;
   overflow: hidden;
-  transition: .5s all;
 }
 
 .catalog__title {
